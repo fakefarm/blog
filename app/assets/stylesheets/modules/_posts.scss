@@ -1,0 +1,15 @@
+.m-posts{
+  @include row($direction: RTL);
+}
+
+.post-tags {
+  @include media($bp-tablet) {
+    @include span-columns(3);
+  }
+}
+
+.post-articles {
+  @include media($bp-tablet) {
+    @include span-columns(8);
+  }
+}

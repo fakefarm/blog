@@ -1,0 +1,15 @@
+.m-footer{
+  @include row;
+}
+
+.footer-column {
+  @include media($bp-tablet) {
+    @include span-columns(3);
+  }
+}
+
+.footer-fat-column {
+ @include media($bp-tablet) {
+   @include span-columns(6);
+ }
+}

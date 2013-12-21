@@ -1,9 +1,19 @@
 doctype
 html
   head
-    title On Another Note...
+    title On Another Note... by Dave Woodall
     = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
+    link href="http://fonts.googleapis.com/css?family=Cutive+Mono|Alegreya+Sans:500,700,900" rel="stylesheet" type="text/css"
+    meta content="Dave Woodall" name="author"
+    meta content="chrome=1" http-equiv="X-UA-Compatible"
+    meta content="initial-scale=1.0, user-scalable=no, maximum-scale=1.0" name="viewport"
+    meta content="yes" name="apple-mobile-web-app-capable"
+    meta content="black" name="apple-mobile-web-app-status-bar-style"
+
+
   body
     = yield
+
+

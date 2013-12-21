@@ -1,0 +1,9 @@
+.l-container {
+  background: $container;
+}
+
+.l-header,
+.l-body,
+.l-footer {
+  @include outer-container;
+}

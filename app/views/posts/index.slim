@@ -1,33 +1,37 @@
 = render 'header'
 
 .l-container
-  .m-posts
-    .posts-hero
-      .ph-wrapper
-        .ph-title
-          h3= @title_post.title
-        .ph-gist
-          h4= @title_post.gist
-        .ph-body
-          p= @title_post.body
-    .posts-archives
-      - @posts.each do |post|
-        .pa-wrapper
-          .pa-image
-          .pa-text
-            .pa-tag
-              h3= post.tag
-            .pa-title
-              h3= post.title
-            .pa-body
-              p= post.gist
-  .m-tags
-    .tag-title
-      h4 Topics
-    .tag-list
-      ul
-        - @tags.each do |tag|
-          li= tag
+  .l-body
+    .m-posts
+      .post-tags
+        .m-background-color-wrapper
+          .tag-title
+            h4 Topics
+          .tag-list
+            ul
+              - @tags.each do |tag|
+                li= tag
 
+      .post-articles
+        .posts-index
+          .posts-hero
+            .m-background-color-wrapper
+              .ph-title
+                h3= @title_post.title
+              .ph-gist
+                h4= @title_post.gist
+              .ph-body
+                p= @title_post.body
+          .posts-archives
+            - @posts.each do |post|
+              .m-background-color-wrapper
+                .pa-image
+                .pa-text
+                  .pa-tag
+                    h3= post.tag
+                  .pa-title
+                    h3= post.title
+                  .pa-body
+                    p= post.gist
 
 = render 'footer'
