@@ -1,11 +1,4 @@
-/ header partial
-.l-header
-  .m-header
-    .header-title
-      h1 On another note!
-    .header-sub-title
-      h2 By Dave Woodall
-
+= render 'header'
 
 .l-container
   .m-posts
@@ -37,17 +30,4 @@
           li= tag
 
 
-/ footer partial
-.l-footer
-  .m-footer
-    .footer-about
-      .footer-title
-      .footer-copy
-    .footer-projects
-      .footer-title
-      .footer-list
-    .footer-social
-      .footer-title
-      .footer-list
-- @posts.each do |post|
-  p= post.title
+= render 'footer'
