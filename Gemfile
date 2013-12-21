@@ -28,19 +28,22 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
+group :development do
+  gem 'pry'
+end
+
 group :development, :test do
   gem 'awesome_print', :require => 'ap'
   gem 'quiet_assets'
   gem 'better_errors'
   gem "letter_opener"
-  gem 'pry'
   gem 'binding_of_caller'
   gem 'xray-rails'
   gem "rails-erd"
   gem 'sqlite3'
-  gem 'rspec-rails', '~> 2.13.0'
-  gem 'guard-rspec', '1.2.1'
-  gem 'factory_girl_rails', '~> 4.2.1'
+  gem 'rspec-rails'
+  gem 'guard-rspec'
+  gem 'factory_girl_rails'
 end
 
 group :doc do
@@ -49,10 +52,10 @@ group :doc do
 end
 
 group :test do
-  gem 'faker', '~> 1.1.2'
-  gem 'capybara', '~> 2.0.2'
-  gem 'database_cleaner', '~> 0.9.1'
-  gem 'launchy', '~> 2.4.2'
+  gem 'faker'
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'launchy'
 end
 
 # Use ActiveModel has_secure_password
