@@ -1,8 +1,10 @@
 / header partial
 .l-header
   .m-header
-    h1 On another note!
-    h2 By Dave Woodall
+    .header-title
+      h1 On another note!
+    .header-sub-title
+      h2 By Dave Woodall
 
 
 .l-container
@@ -10,18 +12,29 @@
     .posts-hero
       .ph-wrapper
         .ph-title
+          h3= @title_post.title
         .ph-gist
+          h4= @title_post.gist
         .ph-body
+          p= @title_post.body
     .posts-archives
-      .pa-wrapper
-        .pa-image
-        .pa-text
-          .pa-category
-          .pa-title
-          .pa-body
-  .m-catetories
-    .category-title
-    .category-list
+      - @posts.each do |post|
+        .pa-wrapper
+          .pa-image
+          .pa-text
+            .pa-tag
+              h3= post.tag
+            .pa-title
+              h3= post.title
+            .pa-body
+              p= post.gist
+  .m-tags
+    .tag-title
+      h4 Topics
+    .tag-list
+      ul
+        - @tags.each do |tag|
+          li= tag
 
 
 / footer partial
@@ -36,3 +49,5 @@
     .footer-social
       .footer-title
       .footer-list
+- @posts.each do |post|
+  p= post.title
