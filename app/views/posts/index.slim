@@ -4,18 +4,17 @@
   .l-body
     .m-posts
       .post-tags
-        .m-background-color-wrapper
-          .tag-title
-            h4 Topics
-          .tag-list
-            ul
-              - @tags.each do |tag|
-                li= tag
+        .tag-title
+          h4 Topics
+        .tag-list
+          ul
+            - @tags.each do |tag|
+              li= tag
 
       .post-articles
         .posts-index
           .posts-hero
-            .m-background-color-wrapper
+            .m-hero-wrapper
               .ph-title
                 h3= @title_post.title
               .ph-gist
@@ -24,12 +23,14 @@
                 p= @title_post.body
           .posts-archives
             - @posts.each do |post|
-              .m-background-color-wrapper
+              .pa-archve
                 .pa-image
-                .pa-text
-                  .pa-tag
-                    h3= post.tag
-                  .pa-title
-                    h3= post.title
-                  .pa-body
-                    p= post.gist
+                  = image_tag('flatirons_tn.jpg')
+                .pa-copy
+                  .pa-text
+                    .pa-tag
+                      h3= post.tag
+                    .pa-title
+                      h3= post.title
+                    .pa-body
+                      p= post.gist
