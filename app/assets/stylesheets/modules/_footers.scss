@@ -1,5 +1,10 @@
 .m-footer{
   @include row;
+  color: $white;
+}
+
+.footer-copy p{
+  font-family: $base-font-family;
 }
 
 .footer-column {

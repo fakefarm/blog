@@ -1,6 +1,9 @@
 $base-font-family:  'Alegreya Sans', sans-serif;
-$base-headline:     'Cutive Mono', serif;
+$paragraph-font:    courier;
 
 $base-font-size:    100%;
 $base-font-weight:  normal;
+$base-font-bold:    700;
 
+$heading-font-family: $base-font-family;
+$heading-font-weight: 900;

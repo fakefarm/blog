@@ -3,12 +3,22 @@
   -moz-osx-font-smoothing: grayscale !important;
 }
 
-
 body {
+  min-height: 100%;
+  min-width: 100%;
+  background: image_url("flatirons.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
   color:        $text-color;
   font-size:    $base-font-size;
   font-family:  $base-font-family;
   font-weight:  $base-font-weight;
-  line-height:  1.6;
+  line-height:  $normal-height;
+}
+
+footer {
   background:   $background;
 }

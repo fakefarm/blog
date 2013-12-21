@@ -4,9 +4,11 @@
 @import 'settings/typography';
 @import 'settings/colors';
 @import 'settings/breakpoints';
+@import 'settings/spaces';
 
 @import 'base/reset';
 @import 'base/base';
+@import 'base/typography';
 
 @import 'layout/layouts';
 

@@ -10,6 +10,6 @@
 
 .post-articles {
   @include media($bp-tablet) {
-    @include span-columns(8);
+    @include span-columns(9);
   }
 }
