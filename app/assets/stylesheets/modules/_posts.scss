@@ -22,10 +22,36 @@
 }
 
 .pa-image {
-  @include span-columns(3);
+  @include media($bp-tablet) {
+    @include span-columns(3);
+  }
 }
 
 .pa-copy {
-  @include span-columns(8);
-  margin-left: 1em;
+  @include row;
+  @include media($bp-tablet) {
+    @include span-columns(6);
+    @include shift(2);
+  }
+  @include media($bp-desktop) {
+    @include span-columns(8);
+    @include shift(0);
+    padding-top: $normal-padding;
+  }
+}
+
+.pa-tag {
+  float: left;
+  border-right: 1px solid $ltblue;
+  h3 {
+    color: $ltblue;
+    font-weight: $base-font-bold;
+  }
+  padding-left: $normal-padding;
+  padding-right: $normal-padding;
+  margin-right: $normal-padding;
+}
+
+.pa-body {
+  padding-left: $normal-padding;
 }
