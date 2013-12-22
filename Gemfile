@@ -6,6 +6,7 @@ gem 'slim-rails'
 gem 'neat'
 gem 'slim'
 gem 'redcarpet', '1.17.2'
+gem 'pg'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
