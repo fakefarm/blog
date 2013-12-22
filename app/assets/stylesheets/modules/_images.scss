@@ -6,3 +6,8 @@
     position: relative;
   }
 }
+
+.m-image--signature {
+  @include shift(6);
+  img { width: 50%; }
+}
