@@ -1,8 +1,6 @@
-.nav-home-button {
-  background: white;
-  padding: 0.5em $normal-padding;
-
-  &:hover{
-    background: $grey;
-  }
+a.nav-home-button{
+  @include shift(8);
+  margin-top: 0;
+  margin-bottom: 0;
+  color: white;
 }

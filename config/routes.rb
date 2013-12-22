@@ -1,7 +1,8 @@
 DaveApp::Application.routes.draw do
 
   root 'posts#index'
-  resources :posts
+  resources :posts, path: '', except: [:new]
+  resources :posts, only: [:new, :create]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

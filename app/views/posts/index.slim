@@ -15,18 +15,22 @@
         .posts-index
           .posts-hero
             .m-hero-wrapper
-              .ph-title
-                h3= @title_post.title
-              .ph-gist
-                h4= @title_post.gist
+              =link_to post_path(@title_post.slug) do
+                .ph-title
+                  h3= @title_post.title
+                .ph-gist
+                  h4= @title_post.gist
               .ph-body
-                p= markdown(@title_post.body)
+                = markdown(@title_post.body)
           .posts-archives
             - @posts.each do |post|
               =link_to post_path(post.slug) do
                 .pa-archve
                   .pa-image
-                    = image_tag('flatirons_tn.jpg')
+                    - if post.thumb_image.empty?
+                      = image_tag('flatirons_tn.jpg')
+                    - else
+                      = image_tag(post.thumb_image)
                   .pa-copy
                     .pa-tag
                       h3= post.tag

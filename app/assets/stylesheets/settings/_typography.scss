@@ -7,3 +7,17 @@ $base-font-bold:    700;
 
 $heading-font-family: $base-font-family;
 $heading-font-weight: 900;
+
+@mixin text-overrides {
+  h1, h2, h3, h4 {
+    color: $text-color;
+    margin: 0;
+    padding: 0;
+    font-size: $base-font-size + 80%;
+    font-weight: $base-font-bold;
+  }
+  p{
+    margin: 0;
+    padding: 0;
+  }
+}

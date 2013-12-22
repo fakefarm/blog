@@ -1,4 +1,6 @@
 .header-shade
+.hero-image
+  = image_tag(@post.hero_image)
 .l-header
   .m-home-button
     = link_to 'home', posts_path, class: 'nav-home-button'
@@ -25,17 +27,19 @@
             .m-hero-wrapper
               .ph-body
                 p= markdown(@post.body)
-          .posts-archives
-            h4 Off that note...
-            - @posts.each do |post|
-              =link_to post_path(post.slug) do
-                .pa-archve
-                  .pa-image
-                    = image_tag('flatirons_tn.jpg')
-                  .pa-copy
-                    .pa-tag
-                      h3= post.tag
-                    .pa-title
-                      h3= post.title
-                    .pa-body
-                      p= post.gist
+          - if @posts.count > 1
+            .posts-archives
+              h4 Off that note...
+              - @posts.each do |post|
+                - unless post.tag == @post.tag
+                  =link_to post_path(post.slug) do
+                    .pa-archve
+                      .pa-image
+                        = image_tag('flatirons_tn.jpg')
+                      .pa-copy
+                        .pa-tag
+                          h3= post.tag
+                        .pa-title
+                          h3= post.title
+                        .pa-body
+                          p= post.gist

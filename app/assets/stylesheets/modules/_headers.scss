@@ -1,6 +1,6 @@
 .m-header {
   @include media($bp-tablet) {
-    padding-bottom: $extra-padding;
+    padding: 3em 0;
   }
 }
 

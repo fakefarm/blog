@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_action :tags
 
   def index
-    @posts = Post.all
+    @posts = Post.all[0...-1].reverse
     @title_post = Post.last
   end
 
@@ -18,7 +18,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     if @post.save
-      redirect_to posts_path
+      redirect_to root_path
     end
   end
 
