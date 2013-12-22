@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :tags
+  before_action :find_post, only: [:show, :edit, :update]
 
   def index
     @posts = Post.all[0...-1].reverse
@@ -7,7 +8,6 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find_by_slug(params[:id])
     @posts = Post.where(tag: @post.tag)
   end
 
@@ -18,6 +18,15 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     if @post.save
+      redirect_to root_path
+    end
+  end
+
+  def edit
+  end
+
+  def update
+    if @post.update_attributes!(post_params)
       redirect_to root_path
     end
   end
@@ -35,5 +44,9 @@ private
 
   def post_params
     params.require(:post).permit(:title, :gist, :slug, :hero_image, :thumb_image, :tag, :body)
+  end
+
+  def find_post
+    @post = Post.find_by_slug(params[:id])
   end
 end
