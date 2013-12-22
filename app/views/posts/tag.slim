@@ -1,0 +1,49 @@
+.header-shade
+.hero-image
+  = image_tag(@title_post.hero_image)
+.l-header
+  .m-home-button
+    = link_to 'home', posts_path, class: 'nav-home-button'
+  .m-header
+    .header-title
+      h1= @title_post.tag
+
+.l-container
+  .l-body
+    .m-posts
+      .post-tags
+        .tag-title
+          h4 Topics
+        .tag-list
+          ul
+            - @tags.each do |tag|
+              li= link_to tag, tag_path(tag)
+
+      .post-articles
+        .posts-index
+          .posts-hero
+            .m-hero-wrapper
+              =link_to post_path(@title_post.slug) do
+                .ph-title
+                  h3= @title_post.title
+                .ph-gist
+                  h4= @title_post.gist
+              .ph-body
+                = markdown(@title_post.body)
+              .m-image--signature
+                = image_tag('dw.png')
+          - if @posts.count > 1
+            .posts-archives
+              - @posts.each do |post|
+                - unless post.title == @title_post.title
+                  =link_to post_path(post.slug) do
+                    .pa-archve
+                      .pa-image
+                        = image_tag('flatirons_tn.jpg')
+                      .pa-copy
+                        .pa-tag
+                          h3= post.tag
+                        .pa-title
+                          h3= post.title
+                        .pa-body
+                          p= post.gist

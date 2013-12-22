@@ -22,6 +22,11 @@ class PostsController < ApplicationController
     end
   end
 
+  def tag
+    @posts = Post.where(tag: params[:tag])
+    @title_post = @posts.last
+  end
+
 private
 
   def tags
