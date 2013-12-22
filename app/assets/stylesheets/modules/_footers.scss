@@ -1,6 +1,13 @@
 .m-footer{
   @include row;
   color: $white;
+  a {
+    color: $ltblue;
+    text-decoration: none;
+    &:hover{
+    text-decoration: underline;
+    }
+  }
 }
 
 .footer-copy p{
