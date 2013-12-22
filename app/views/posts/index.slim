@@ -9,7 +9,7 @@
         .tag-list
           ul
             - @tags.each do |tag|
-              li= tag
+              li= link_to tag, tag_path(tag)
 
       .post-articles
         .posts-index
@@ -22,6 +22,8 @@
                   h4= @title_post.gist
               .ph-body
                 = markdown(@title_post.body)
+              .m-image--signature
+                = image_tag('dw.png')
           .posts-archives
             - @posts.each do |post|
               =link_to post_path(post.slug) do

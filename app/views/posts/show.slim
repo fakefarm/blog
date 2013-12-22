@@ -27,6 +27,8 @@
             .m-hero-wrapper
               .ph-body
                 p= markdown(@post.body)
+              .m-image--signature
+                = image_tag('dw.png')
           - if @posts.count > 1
             .posts-archives
               h4 Off that note...
