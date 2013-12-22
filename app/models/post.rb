@@ -6,4 +6,8 @@ class Post < ActiveRecord::Base
     end
     tags.uniq
   end
+
+  def to_param
+    self.slug
+  end
 end

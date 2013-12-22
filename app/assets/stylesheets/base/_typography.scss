@@ -23,7 +23,13 @@
   font-family: $paragraph-font;
   line-height: $extra-height;
 }
-
+.a {
+  color: $blue;
+  text-decoration: none;
+  &:hover{
+    color: $ltblue;
+  }
+}
 .italic { font-style: italic; }
 .block-margins { margin: 0.5em 0; }
 .unordered-list { }
@@ -40,6 +46,7 @@
   h5, .h5 { @extend .h5; margin: 0.5em 0 0.2em; }
   h6, .h6 { @extend .h6; margin: 0.5em 0 0.2em; }
   p,  .p  { @extend .p;  margin: 0.5em 0 0.2em; }
+  a,  .a  { @extend .a;  margin: 0.5em 0 0.2em; }
 
   p, ul, ol, pre { @extend .block-margins; }
 

@@ -1,11 +1,14 @@
 class PostsController < ApplicationController
+  before_action :tags
+
   def index
     @posts = Post.all
     @title_post = Post.last
-    @tags = Post.tags
   end
 
   def show
+    @post = Post.find_by_slug(params[:id])
+    @posts = Post.where(tag: @post.tag)
   end
 
   def new
@@ -20,6 +23,10 @@ class PostsController < ApplicationController
   end
 
 private
+
+  def tags
+    @tags = Post.tags
+  end
 
   def post_params
     params.require(:post).permit(:title, :gist, :slug, :hero_image, :thumb_image, :tag, :body)

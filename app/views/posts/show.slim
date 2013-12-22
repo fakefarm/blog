@@ -1,4 +1,12 @@
-= render 'header'
+.header-shade
+.l-header
+  .m-home-button
+    = link_to 'home', posts_path, class: 'nav-home-button'
+  .m-header
+    .header-title
+      h1= @post.title
+    .header-sub-title
+      h2= @post.gist
 
 .l-container
   .l-body
@@ -15,13 +23,10 @@
         .posts-index
           .posts-hero
             .m-hero-wrapper
-              .ph-title
-                h3= @title_post.title
-              .ph-gist
-                h4= @title_post.gist
               .ph-body
-                p= markdown(@title_post.body)
+                p= markdown(@post.body)
           .posts-archives
+            h4 Off that note...
             - @posts.each do |post|
               =link_to post_path(post.slug) do
                 .pa-archve
