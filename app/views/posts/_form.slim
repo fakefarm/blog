@@ -1,0 +1,17 @@
+= form_for @post do |f|
+  .input
+    =f.text_field :title, placeholder: 'title'
+  .input
+    =f.text_field :gist, placeholder: 'gist'
+  .input
+    =f.text_field :slug, placeholder: 'slug'
+  .input
+    =f.text_field :hero_image, placeholder: 'hero image'
+  .input
+    =f.text_field :thumb_image, placeholder: 'thumb image'
+  .input
+    =f.text_field :tag, placeholder: 'tag'
+  .input
+    =f.text_area :body, placeholder: 'body', rows: 20
+  .input
+    =f.submit
