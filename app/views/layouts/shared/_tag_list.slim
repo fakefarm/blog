@@ -1,0 +1,11 @@
+.post-tags
+  .tag-title
+    h4 Topics
+  .tag-list
+    ul
+      - @tags.each do |tag|
+        li= link_to tag, tag_path(tag)
+  = link_to root_path do
+    span= "all ("
+    i.fa.fa-home
+    span= ")"

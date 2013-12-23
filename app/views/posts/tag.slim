@@ -10,15 +10,8 @@
   .l-body
     = render 'layouts/shared/breadcrumb', post: @posts
     .m-posts
-      .post-tags
-        .tag-title
-          h4 Topics
-        .tag-list
-          ul
-            - @tags.each do |tag|
-              li= link_to tag, tag_path(tag)
-
+      = render 'layouts/shared/tag_list'
       .post-articles
-        .posts-archives
+        .posts-arvchives
           - @posts.each do |post|
             = render 'post_snippet', post: post
