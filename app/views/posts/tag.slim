@@ -19,30 +19,6 @@
               li= link_to tag, tag_path(tag)
 
       .post-articles
-        .posts-index
-          .posts-hero
-            .m-hero-wrapper
-              =link_to post_path(@title_post.slug) do
-                .ph-title
-                  h3= @title_post.title
-                .ph-gist
-                  h4= @title_post.gist
-              .ph-body
-                = markdown(@title_post.body)
-              .m-image--signature
-                = image_tag('dw.png')
-          - if @posts.count > 1
-            .posts-archives
-              - @posts.each do |post|
-                - unless post.title == @title_post.title
-                  =link_to post_path(post.slug) do
-                    .pa-archve
-                      .pa-image
-                        = image_tag('flatirons_tn.jpg')
-                      .pa-copy
-                        .pa-tag
-                          h3= post.tag
-                        .pa-title
-                          h3= post.title
-                        .pa-body
-                          p= post.gist
+        .posts-archives
+          - @posts.each do |post|
+            = render 'post_snippet', post: post

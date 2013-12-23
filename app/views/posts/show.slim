@@ -33,14 +33,4 @@
               h4 Off that note...
               - @posts.each do |post|
                 - unless post.title == @post.title
-                  =link_to post_path(post.slug) do
-                    .pa-archve
-                      .pa-image
-                        = image_tag('flatirons_tn.jpg')
-                      .pa-copy
-                        .pa-tag
-                          h3= post.tag
-                        .pa-title
-                          h3= post.title
-                        .pa-body
-                          p= post.gist
+                  = render 'post_snippet', post: post

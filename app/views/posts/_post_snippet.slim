@@ -1,0 +1,16 @@
+=link_to post_path(post.slug) do
+  .pa-archve
+    .pa-image
+      - if post.thumb_image.empty?
+        = image_tag('flatirons_tn.jpg')
+      - else
+        = image_tag(post.thumb_image)
+    .pa-copy
+      .pa-tag
+        h3= post.tag
+      .pa-title
+        h3= post.title
+      .pa-gist
+        h4= post.gist
+      .pa-body
+        p read more...
