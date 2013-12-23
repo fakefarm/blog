@@ -1,8 +1,17 @@
-.h1, .h2, .h3, .h4, .h5, .h6 { font-family: $heading-font-family; font-weight: $heading-font-weight; }
+.h1, .h2, .h3, .h4, .h5, .h6 { font-weight: $heading-font-weight; }
 
 .h1, .h2 {
   line-height: 1.1;
   color: $white;
+  text-shadow: 0px 1px 2px $text-color;
+}
+
+.h1 {
+  font-family: $heading-font-family;
+}
+
+.h2, .h4 {
+  font-family: $condensed;
 }
 
 .h3, .h4 {
@@ -10,8 +19,8 @@
   color: $title;
 }
 
-.h1 { font-size: 400%; letter-spacing: -1px; }
-.h2 { font-size: 180%; letter-spacing: -1px; }
+.h1 { font-size: 400%; }
+.h2 { font-size: 180%; }
 .h3 { font-size: 160%; }
 .h4 {
   font-size: 150%;
@@ -53,4 +62,10 @@
   ol { @extend .ordered-list; }
 
   pre, code { @extend .fixed; }
+  blockquote {
+    font-family: courier;
+    padding-left: 1em;
+    border-left: 2px solid $dkgrey;
+    color: $dkgrey;
+  }
 }

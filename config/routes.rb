@@ -1,7 +1,7 @@
 DaveApp::Application.routes.draw do
 
   root 'posts#index'
-  resources :posts
+  resources :posts, path: ''
 
   get 'topic/:tag' => 'posts#tag', as: :tag
 

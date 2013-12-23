@@ -5,7 +5,7 @@ html
     = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
-    link href="http://fonts.googleapis.com/css?family=Cutive+Mono|Alegreya+Sans:500,700,900" rel="stylesheet" type="text/css"
+    = render 'layouts/shared/fonts'
     link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"
     meta content="Dave Woodall" name="author"
     meta content="chrome=1" http-equiv="X-UA-Compatible"
@@ -19,3 +19,4 @@ html
 
     footer
       = render 'footer'
+
