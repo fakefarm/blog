@@ -2,8 +2,6 @@
 .hero-image
   = image_tag(@post.hero_image)
 .l-header
-  .m-home-button
-    = link_to 'home', posts_path, class: 'nav-home-button'
   .m-header
     .header-title
       h1= @post.title
@@ -12,6 +10,7 @@
 
 .l-container
   .l-body
+    = render 'layouts/shared/breadcrumb', post: @post
     .m-posts
       .post-tags
         .tag-title
@@ -19,7 +18,7 @@
         .tag-list
           ul
             - @tags.each do |tag|
-              li= tag
+              li= link_to tag, tag_path(tag)
 
       .post-articles
         .posts-index

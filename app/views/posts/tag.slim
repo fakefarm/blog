@@ -2,14 +2,13 @@
 .hero-image
   = image_tag(@title_post.hero_image)
 .l-header
-  .m-home-button
-    = link_to 'home', posts_path, class: 'nav-home-button'
   .m-header
     .header-title
       h1= @title_post.tag
 
 .l-container
   .l-body
+    = render 'layouts/shared/breadcrumb', post: @posts
     .m-posts
       .post-tags
         .tag-title

@@ -36,7 +36,6 @@
 .ordered-list { list-style: decimal; }
 
 .typography {
-  i, em { @extend .italic; }
   b, strong { @extend .bold; }
 
   h1, .h1 { @extend .h1; }

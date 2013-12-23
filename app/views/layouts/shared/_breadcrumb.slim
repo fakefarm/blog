@@ -1,0 +1,14 @@
+.m-breadcrumb
+  = link_to root_path do
+    i.fa.fa-home
+    i.fa.fa-angle-double-right
+
+  - if post.try(:title)
+    = link_to "/topic/#{post.tag}" do
+      span= post.tag
+      i.fa.fa-angle-double-right
+    = link_to post.title, post_path(post)
+
+  - else
+    = link_to "/topic/#{post.first.tag}" do
+      span= post.first.tag
