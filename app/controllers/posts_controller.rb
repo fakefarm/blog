@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   before_action :tags
   before_action :find_post, only: [:show, :edit, :update]
+  before_action :admin?, except: [:index, :show, :tag]
 
   def index
     @posts = Post.all[0...-1].reverse
@@ -48,5 +49,15 @@ private
 
   def find_post
     @post = Post.find_by_slug(params[:id])
+  end
+
+  def admin?
+    if current_user.nil?
+      redirect_to root_path
+    else
+      unless current_user.role == "Admin"
+        redirect_to root_path
+      end
+    end
   end
 end

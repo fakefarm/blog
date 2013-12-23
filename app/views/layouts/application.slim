@@ -16,8 +16,10 @@ html
 
 
   body.typography
+    p.notice= notice
+    p.alert= alert
     = yield
 
     footer
-      = render 'footer'
+      = render 'posts/footer'
 

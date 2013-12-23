@@ -1,11 +1,25 @@
 .l-footer
   .m-footer
-    .footer-fat-column
+    .footer-column
       .footer-about
         .footer-title
           h5 About
         .footer-copy
           p Random thoughts from a 30 something. I reserve the right to contradict myself.
+    .footer-column
+      .footer-about
+        .footer-title
+          h5 Users
+        .footer-copy
+          - if user_signed_in?
+            p
+              | Welcome
+              = current_user.email
+            = link_to 'Logged In [click to logout]', destroy_user_session_path, :method => :delete
+          - else
+            p
+              | Private area
+              =< link_to 'sign in.', new_user_session_path
     .footer-column
       .footer-projects
         .footer-title

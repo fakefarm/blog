@@ -8,6 +8,7 @@ gem 'slim'
 gem 'redcarpet', '1.17.2'
 gem 'pg'
 gem 'rails_12factor', group: :production
+gem 'devise'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
