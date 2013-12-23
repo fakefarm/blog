@@ -5,5 +5,6 @@
 .l-header,
 .l-body,
 .l-footer {
+  padding: 0 1em;
   @include outer-container;
 }

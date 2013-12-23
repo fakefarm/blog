@@ -35,12 +35,9 @@
 .pa-copy {
   @include row;
   @include media($bp-tablet) {
-    @include span-columns(6);
-    @include shift(2);
+    @include span-columns(8);
   }
   @include media($bp-desktop) {
-    @include span-columns(8);
-    @include shift(0);
     padding-top: $normal-padding;
   }
 }
