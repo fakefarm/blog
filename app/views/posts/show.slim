@@ -32,7 +32,7 @@
             .posts-archives
               h4 Off that note...
               - @posts.each do |post|
-                - unless post.tag == @post.tag
+                - unless post.title == @post.title
                   =link_to post_path(post.slug) do
                     .pa-archve
                       .pa-image
