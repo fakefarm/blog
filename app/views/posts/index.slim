@@ -20,4 +20,5 @@
                 = image_tag('dw.png')
           .posts-archives
             - @posts.each do |post|
-              = render 'post_snippet', post: post
+              - unless post.title == @title_post.title
+                = render 'post_snippet', post: post

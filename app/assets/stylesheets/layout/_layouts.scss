@@ -2,6 +2,12 @@
   background: $container;
 }
 
+.l-header {
+  @include media($bp-tablet) {
+    margin-top: -15em;
+  }
+}
+
 .l-header,
 .l-body,
 .l-footer {
