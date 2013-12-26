@@ -19,11 +19,22 @@ $heading-font-weight: 900;
   }
   p{
     margin: 0;
-    padding: 0;
+    padding: 0 1em 1em;
     img {
       width: 80%;
       display: block;
       margin: 0 auto;
     }
+  }
+  i, em {
+    font-family: georgia;
+    font-style: italic;
+    font-size: 0.9em;
+  }
+  strong {
+    font-weight: 900;
+  }
+  blockquote {
+    margin-bottom: 1em;
   }
 }
