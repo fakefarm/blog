@@ -9,7 +9,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @posts = Post.where(tag: @post.tag)
+    @posts = Post.where(tag: @post.tag).sort
   end
 
   def new
@@ -33,7 +33,7 @@ class PostsController < ApplicationController
   end
 
   def tag
-    @posts = Post.where(tag: params[:tag])
+    @posts = Post.where(tag: params[:tag]).sort
     @title_post = @posts.last
   end
 
