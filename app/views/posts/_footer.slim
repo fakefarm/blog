@@ -10,6 +10,8 @@
       .footer-about
         .footer-title
           h5 Users
+          p.notice= notice
+          p.alert= alert
         .footer-copy
           - if user_signed_in?
             p
