@@ -4,7 +4,9 @@
   .tag-list
     ul#tags
       - @tags.sort.each do |tag|
-        li= link_to tag, tag_path(tag)
+        li= link_to tag_path(tag) do
+          => tag
+          span= "(#{tag_count tag})"
   = link_to root_path do
     span= "all ("
     i.fa.fa-home
