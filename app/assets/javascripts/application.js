@@ -14,3 +14,12 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+  $('#tags li').each(function(){
+    var href = $(this).find('a').attr('href');
+    if (href === window.location.pathname) {
+      $(this).addClass('current');
+    }
+  })
+});
