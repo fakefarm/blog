@@ -9,6 +9,8 @@ gem 'redcarpet', '1.17.2'
 gem 'pg'
 gem 'rails_12factor', group: :production
 gem 'devise'
+gem 'activeadmin', github: 'gregbell/active_admin'
+
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -31,11 +33,10 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
-group :development do
-  gem 'pry'
-end
-
 group :development, :test do
+  gem 'pry'
+  gem 'rspec-rails', '~> 2.14.0'
+  gem 'factory_girl_rails', '~> 4.2.1'
   gem 'awesome_print', :require => 'ap'
   gem 'quiet_assets'
   gem 'better_errors'
@@ -44,21 +45,20 @@ group :development, :test do
   gem 'xray-rails'
   gem "rails-erd"
   gem 'sqlite3'
-  gem 'rspec-rails'
-  gem 'guard-rspec'
-  gem 'factory_girl_rails'
 end
+
+group :test do
+  gem 'faker', '~> 1.1.2'
+  gem 'capybara', '~> 2.1.0'
+  gem 'database_cleaner', '~> 1.0.1'
+  gem 'launchy', '~> 2.4.2'
+  gem 'selenium-webdriver', '~> 2.35.1'
+end
+
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
-end
-
-group :test do
-  gem 'faker'
-  gem 'capybara'
-  gem 'database_cleaner'
-  gem 'launchy'
 end
 
 # Use ActiveModel has_secure_password
