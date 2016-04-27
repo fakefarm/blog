@@ -1,6 +1,6 @@
 .header-shade
 .hero-image
-  = image_tag(@title_post.hero_image)
+  = image_tag(@title_post.hero_image) if @title_post
 .l-header
   .m-header
     .header-title
