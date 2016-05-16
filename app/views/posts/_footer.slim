@@ -1,59 +1,61 @@
 .l-footer
-  .m-footer
-    .footer-column
-      .footer-about
-        .footer-title
-          h5 About
-        .footer-copy
-          p Thanks for stopping by!
-          p I'd like to think I'm a modern-day Renaissance man. I spend my time thinking, building, designing, coding, inventing, and philosophizing.
-          p I have been journaling for nearly 20 years, so blogging is a natural extension for the parts of me that I want to keep track of publicly.
 
-    .footer-column
-      .footer-about
-        .footer-title
-          h5 Users
-          p.notice= notice
-          p.alert= alert
-        .footer-copy
-          - if user_signed_in?
-            p
-              | Welcome
-              = current_user.email
-            = link_to 'Logged In [click to logout]', destroy_user_session_path, :method => :delete
-          - else
-            p
-              | Private area
-              =< link_to 'sign in.', new_user_session_path
-    .footer-column
-      .footer-projects
-        .footer-title
-          h5 Projects
-        .footer-list
-          ul
-            li
-              a href="http://www.hireDave.me" class="footer-link" hireDave
-            li
-              a href="http://www.destroyalltasks.com" class="footer-link" Destroy All Tasks
-            li
-              a href="http://www.afterburners.mx" class="footer-link" Afterburners
-            li
-              a href="http://www.catmathdo.com" class="footer-link" CatMathDo
-            li
-              a href="http://www.boulderwebcamp.com" class="footer-link" Boulder Web Camp
-            li
-              a href="http://abidinglife.tumblr.com" class="footer-link" Abiding Life
-    .footer-column
-      .footer-social
-        .footer-title
-          h5 Social
-        .footer-list
-          ul
-            li
-              a href="https://www.youtube.com/channel/UC6vFDSlJOIEfqfXL7cLAFvw" class="footer-link" youtube
-            li
-              a href="http://www.linkedin.com/in/davewoodall" class="footer-link" linkedin
-            li
-              a href="http://www.github.com/woodall" class="footer-link" github
-            li
-              a href="http://www.dribbble.com/davewoodall" class="footer-link" dribbble
+  .m-footer
+    .footer-about
+      .footer-title
+        h5 Intro
+      .footer-copy
+        p If you're familiar with Meyers-Briggs then my letters "INTJ" will make sense. If you're not familiar, well it basically means I like learn about a lot of things, in a lot of ways. But more than learn, I like to build, create, design, think, and grow. If I had to summarize myself, I like to think I'm a modern-day Renaissance man as best I know how. I spend my time thinking, building, designing, coding, inventing, and philosophizing. I have been journaling for nearly 20 years, so blogging is a natural extension for the parts of me that I want to keep track of publicly.
+      .footer-title
+        h5 Topics
+      .footer-copy
+        p I've built this site from scratch so it can be a little buggy at times. I don't tweet or facebook anymore so most of my posts are simialar in fashion to those sites. Except, nobody but the NSA is watching me :-) The home page shows my 5 most recent posts but everything else after that gets tucked into the topics on the sidebar. If your'e still reading, then we must be related somehow because I can't imagine anyone would really get this far. Thanks for stopping by!
+  / 
+  /   .footer-column
+  /     .footer-about
+  /       .footer-title
+  /         h5 Users
+  /         p.notice= notice
+  /         p.alert= alert
+  /       .footer-copy
+  /         - if user_signed_in?
+  /           p
+  /             | Welcome
+  /             = current_user.email
+  /           = link_to 'Logged In [click to logout]', destroy_user_session_path, :method => :delete
+  /         - else
+  /           p
+  /             | Private area
+  /             =< link_to 'sign in.', new_user_session_path
+  /   .footer-column
+  /     .footer-projects
+  /       .footer-title
+  /         h5 Projects
+  /       .footer-list
+  /         ul
+  /           li
+  /             a href="http://www.hireDave.me" class="footer-link" hireDave
+  /           li
+  /             a href="http://www.destroyalltasks.com" class="footer-link" Destroy All Tasks
+  /           li
+  /             a href="http://www.afterburners.mx" class="footer-link" Afterburners
+  /           li
+  /             a href="http://www.catmathdo.com" class="footer-link" CatMathDo
+  /           li
+  /             a href="http://www.boulderwebcamp.com" class="footer-link" Boulder Web Camp
+  /           li
+  /             a href="http://abidinglife.tumblr.com" class="footer-link" Abiding Life
+  /   .footer-column
+  /     .footer-social
+  /       .footer-title
+  /         h5 Social
+  /       .footer-list
+  /         ul
+  /           li
+  /             a href="https://www.youtube.com/channel/UC6vFDSlJOIEfqfXL7cLAFvw" class="footer-link" youtube
+  /           li
+  /             a href="http://www.linkedin.com/in/davewoodall" class="footer-link" linkedin
+  /           li
+  /             a href="http://www.github.com/woodall" class="footer-link" github
+  /           li
+  /             a href="http://www.dribbble.com/davewoodall" class="footer-link" dribbble

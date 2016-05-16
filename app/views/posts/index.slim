@@ -18,6 +18,7 @@
                 = markdown(@title_post.body)
               .m-image--signature
                 = image_tag('dw.png')
+          
           .posts-archives
             - @posts.each do |post|
               - unless post.title == @title_post.title

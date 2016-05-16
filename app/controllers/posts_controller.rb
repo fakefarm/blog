@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   before_action :admin?, except: [:index, :show, :tag]
 
   def index
-    @posts = Post.all[0...-1].reverse
+    @posts = Post.last(6).reverse
     @title_post = Post.last
   end
 

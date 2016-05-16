@@ -18,20 +18,14 @@ end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
-# Use Uglifier as compressor for JavaScript assets
+
 gem 'uglifier', '>= 1.3.0'
 
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
-
-# Use jquery as the JavaScript library
 gem 'jquery-rails'
 
 
 group :development, :test do
   gem 'pry'
-  gem 'rspec-rails', '~> 2.14.0'
-  gem 'factory_girl_rails', '~> 4.2.1'
   gem 'awesome_print', :require => 'ap'
   gem 'quiet_assets'
   gem 'better_errors'
@@ -49,4 +43,3 @@ group :test do
   gem 'launchy', '~> 2.4.2'
   gem 'selenium-webdriver', '~> 2.35.1'
 end
-
